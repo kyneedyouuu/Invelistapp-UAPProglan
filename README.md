@@ -97,11 +97,3 @@ mvn test         # Untuk Maven
 
 ## 📄 Lisensi
 Proyek ini dilisensikan di bawah Lisensi MIT - lihat file LICENSE untuk detail
-
-## ✍️ Penulis
-- Nama Anda - *Pengembangan awal*
-
-## 🙏 Ucapan Terima Kasih
-- Terima kasih kepada semua kontributor
-- Terinspirasi dari sistem manajemen inventaris modern
-- Dibuat dengan ❤️ menggunakan Java Swing
