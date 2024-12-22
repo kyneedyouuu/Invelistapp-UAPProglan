@@ -18,6 +18,7 @@ public class InvelistApp extends JFrame {
     private DefaultTableModel itemTableModel;
     private String itemImagePath;
     private JTable itemTable;
+    private JButton addItemButton, updateItemButton, deleteItemButton;
     private boolean isAdmin;
 
     public InvelistApp(boolean isAdmin) {
@@ -104,7 +105,7 @@ public class InvelistApp extends JFrame {
         gbc.gridx = 0;
         gbc.gridy = 6;
         gbc.gridwidth = 1;
-        JButton addItemButton = new JButton("Tambah Item");
+        addItemButton = new JButton("Tambah Item");
         addItemButton.setFont(customFont);
         addItemButton.setBackground(new Color(144, 238, 144)); // Warna hijau muda
         addItemButton.addActionListener(new ActionListener() {
@@ -134,7 +135,7 @@ public class InvelistApp extends JFrame {
         itemInputPanel.add(addItemButton, gbc);
 
         gbc.gridx = 1;
-        JButton updateItemButton = new JButton("Update Item");
+        updateItemButton = new JButton("Update Item");
         updateItemButton.setFont(customFont);
         updateItemButton.setBackground(new Color(173, 216, 230)); // Warna biru muda
         updateItemButton.addActionListener(new ActionListener() {
@@ -165,7 +166,7 @@ public class InvelistApp extends JFrame {
         itemInputPanel.add(updateItemButton, gbc);
 
         gbc.gridx = 2;
-        JButton deleteItemButton = new JButton("Hapus Item");
+        deleteItemButton = new JButton("Hapus Item");
         deleteItemButton.setFont(customFont);
         deleteItemButton.setBackground(new Color(255, 99, 71)); // Warna merah
         deleteItemButton.addActionListener(new ActionListener() {
@@ -245,7 +246,7 @@ public class InvelistApp extends JFrame {
                 "Devices",
                 formatPrice("999999"),
                 "2",
-                new ImageIcon(new ImageIcon("/image/laptop.jpeg").getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH))
+                new ImageIcon(new ImageIcon("image/laptop.jpeg").getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH))
         });
         itemTableModel.addRow(new Object[]{
                 "002",
@@ -282,8 +283,53 @@ public class InvelistApp extends JFrame {
     }
 
     private String formatPrice(String price) {
-        int priceValue = Integer.parseInt(price);
+        double priceValue = Double.parseDouble(price);
         NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("id", "ID"));
-        return currencyFormat.format(priceValue).replace("Rp", "Rp ");
+        String formattedPrice = currencyFormat.format(priceValue);
+        if (formattedPrice.endsWith(",00")) {
+            formattedPrice = formattedPrice.substring(0, formattedPrice.length() - 3);
+        }
+        return formattedPrice.replace("Rp", "Rp ");
+    }
+
+    // Getter methods for testing
+    public JTextField getItemIdField() {
+        return itemIdField;
+    }
+
+    public JTextField getItemNameField() {
+        return itemNameField;
+    }
+
+    public JTextField getItemCategoryField() {
+        return itemCategoryField;
+    }
+
+    public JTextField getItemPriceField() {
+        return itemPriceField;
+    }
+
+    public JTextField getItemQuantityField() {
+        return itemQuantityField;
+    }
+
+    public JTable getItemTable() {
+        return itemTable;
+    }
+
+    public JButton getAddItemButton() {
+        return addItemButton;
+    }
+
+    public JButton getUpdateItemButton() {
+        return updateItemButton;
+    }
+
+    public JButton getDeleteItemButton() {
+        return deleteItemButton;
+    }
+
+    public void setItemImagePath(String itemImagePath) {
+        this.itemImagePath = itemImagePath;
     }
 }
