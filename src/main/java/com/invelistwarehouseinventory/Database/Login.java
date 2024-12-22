@@ -16,7 +16,7 @@ public class Login extends JFrame {
     private Map<String, String> adminCredentials;
 
     public Login() {
-        setTitle("Login");
+        setTitle("Invelist Application Login Page");
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -24,7 +24,7 @@ public class Login extends JFrame {
         userCredentials = new HashMap<>();
         adminCredentials = new HashMap<>();
 
-        // Add some default users and admins
+        // Credentials buat Login
         userCredentials.put("user", "user123");
         adminCredentials.put("admin", "admin123");
 
@@ -34,7 +34,7 @@ public class Login extends JFrame {
         gbc.insets = new Insets(10, 10, 10, 10);
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
-        JLabel titleLabel = new JLabel("Invelist Gudang Login");
+        JLabel titleLabel = new JLabel("Selamat Datang di Invelist!");
         titleLabel.setFont(new Font("Poppins", Font.BOLD, 20));
         titleLabel.setForeground(new Color(0, 102, 204)); // Dark blue color
         gbc.gridx = 0;
