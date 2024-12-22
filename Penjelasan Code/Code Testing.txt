@@ -1,0 +1,36 @@
+InvelistAppTest.java (Code Testing)
+
+setUp()
+
+Metode ini dijalankan sebelum setiap pengujian. Ini menginisialisasi objek InvelistApp dan mendapatkan model tabel (DefaultTableModel) dari tabel item (itemTable).
+
+testAddItem()
+
+Langkah-langkah:
+
+Mengisi field input dengan data item baru.
+Memanggil metode doClick() pada tombol addItemButton untuk menambahkan item.
+Memeriksa apakah jumlah baris dalam tabel bertambah.
+Memeriksa apakah data item yang ditambahkan sesuai dengan data yang diinput.
+
+Tujuan: Memastikan bahwa item baru dapat ditambahkan ke tabel dengan benar.
+
+testUpdateItem()
+
+Langkah-langkah:
+
+Memilih baris pertama dalam tabel untuk diupdate.
+Mengisi field input dengan data item yang diperbarui.
+Memanggil metode doClick() pada tombol updateItemButton untuk memperbarui item.
+Memeriksa apakah data item dalam tabel sesuai dengan data yang diinput.
+
+Tujuan: Memastikan bahwa item yang dipilih dapat diperbarui dengan benar.
+
+testDeleteItem()
+
+Langkah-langkah:
+Memilih baris pertama dalam tabel untuk dihapus.
+Memanggil metode doClick() pada tombol deleteItemButton untuk menghapus item.
+Memeriksa apakah jumlah baris dalam tabel berkurang.
+
+Tujuan: Memastikan bahwa item yang dipilih dapat dihapus dengan benar.

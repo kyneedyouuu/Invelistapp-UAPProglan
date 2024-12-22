@@ -1,0 +1,30 @@
+Code Review
+
+Berikut adalah review dari kode yang telah dibuat:
+
+1. InvelistApp.java
+   - Positif: Kode ini memiliki struktur yang baik dan menggunakan GridBagLayout untuk mengatur tata letak komponen. Penggunaan DocumentFilter untuk memastikan input numerik juga merupakan praktik yang baik.
+   - Perbaikan: 
+     - Pertimbangkan untuk memisahkan logika bisnis dari logika UI untuk meningkatkan keterbacaan dan pemeliharaan kode.
+     - Tambahkan validasi tambahan untuk memastikan bahwa harga dan jumlah adalah angka positif.
+     - Pertimbangkan untuk menggunakan konstanta untuk nilai warna dan font agar lebih mudah dikelola.
+
+2. Main.java
+   - Positif: Kode ini sederhana dan langsung ke tujuan, yaitu memulai aplikasi.
+   - Perbaikan: Tidak ada perbaikan yang diperlukan.
+
+3. Login.java
+   - Positif: Kode ini memiliki UI yang menarik dan menggunakan GridBagLayout untuk tata letak yang fleksibel.
+   - Perbaikan: 
+     - Pertimbangkan untuk mengenkripsi kata sandi yang disimpan dalam Map untuk meningkatkan keamanan.
+     - Tambahkan validasi tambahan untuk memastikan bahwa input tidak kosong sebelum mencoba login.
+
+4. NumericDocumentFilter.java
+   - Positif*: Kode ini memastikan bahwa hanya angka yang dapat dimasukkan ke dalam field yang menggunakan filter ini.
+   - Perbaikan: Tidak ada perbaikan yang diperlukan.
+
+5. Item.java
+   - Positif: Kode ini memiliki getter dan setter yang lengkap untuk setiap atribut.
+   - Perbaikan: Pertimbangkan untuk menambahkan validasi dalam setter untuk memastikan bahwa nilai yang diatur valid (misalnya, harga dan jumlah harus positif).
+
+Dengan pengujian dan review ini, kita dapat memastikan bahwa aplikasi berfungsi dengan baik dan memiliki kualitas kode yang baik.
