@@ -240,28 +240,28 @@ public class InvelistApp extends JFrame {
 
     private void addInitialData() {
         itemTableModel.addRow(new Object[]{
-                "1",
-                "Milky Boba with Extra Palm Sugar",
-                "Minuman",
-                formatPrice("6000"),
-                "100",
-                new ImageIcon(new ImageIcon("path/to/image1.jpg").getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH))
-        });
-        itemTableModel.addRow(new Object[]{
+                "001",
+                "Asus ROG Strix G30S",
+                "Devices",
+                formatPrice("999999"),
                 "2",
-                "Wafer",
-                "Snack",
-                formatPrice("2000"),
-                "50",
-                new ImageIcon(new ImageIcon("path/to/image2.jpg").getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH))
+                new ImageIcon(new ImageIcon("/image/laptop.jpeg").getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH))
         });
         itemTableModel.addRow(new Object[]{
+                "002",
+                "Mechanical Keyboard with Red Switch Extra Keycaps",
+                "Peripheral",
+                formatPrice("2000000"),
                 "3",
-                "Honey Flavoured Potato Chips",
-                "Snack",
-                formatPrice("10000"),
-                "200",
-                new ImageIcon(new ImageIcon("path/to/image3.jpg").getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH))
+                new ImageIcon(new ImageIcon("image/keyboard.jpeg").getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH))
+        });
+        itemTableModel.addRow(new Object[]{
+                "003",
+                "Gaming Mouse with extra AIM++",
+                "Peripheral",
+                formatPrice("10000000"),
+                "5",
+                new ImageIcon(new ImageIcon("image/mouse.jpeg").getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH))
         });
     }
 
