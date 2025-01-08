@@ -25,8 +25,8 @@ public class Login extends JFrame {
         adminCredentials = new HashMap<>();
 
         // Credentials buat Login
-        userCredentials.put("user", "user123");
-        adminCredentials.put("admin", "admin123");
+        userCredentials.put("user", "buyer");
+        adminCredentials.put("admin", "seller");
 
         JPanel panel = new JPanel(new GridBagLayout());
         panel.setBackground(new Color(173, 216, 230)); // Light blue background
